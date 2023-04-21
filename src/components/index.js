@@ -1,0 +1,1 @@
+export {default as image_1} from '../assets/images/img1.png'

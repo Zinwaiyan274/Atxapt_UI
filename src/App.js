@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import Form from "./components/Form";
+import "./index.css";
+import Frame from "react-frame-component";
+import { ComponentContext } from "./contexts/HandleComponent";
+import Result from "./components/Result/ResultForm";
+import { useContext } from "react";
+const App = () => {
+  const [isResult,setIsResult] = useContext(ComponentContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+          <main className="w-full h-screen ">
+            <div className="flex items-center justify-center h-screen">
+              {
+                Result ? <Form /> : <Result />
+              }
+              
+            </div>
+          </main>
+        
   );
-}
+};
 
 export default App;
