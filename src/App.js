@@ -5,15 +5,18 @@ import Frame from "react-frame-component";
 import { ComponentContext } from "./contexts/HandleComponent";
 import Result from "./components/Result/ResultForm";
 import { useContext } from "react";
+import { ResultContext } from "./contexts/ResultContext";
 const App = () => {
-  const [isResult,setIsResult] = useContext(ComponentContext)
+  const [isResult,setIsResult] = useContext(ResultContext)
+  
   return (
     
           <main className="w-full h-screen ">
             <div className="flex items-center justify-center h-screen">
               {
-                Result ? <Form /> : <Result />
+                isResult ? <Result/> : <Form />
               }
+              
               
             </div>
           </main>

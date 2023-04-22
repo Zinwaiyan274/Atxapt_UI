@@ -12,7 +12,7 @@ const Form = () => {
   const [currentQuestionIndex,setCurrentQuestionIndex] = useContext(StepContext)
   const [isChange,setIsChange] = useContext(ComponentContext)
   const Forms = ()=>{
-    if(isChange <= questionsForCommunity.length ){
+    if(isChange < questionsForCommunity.length -1 ){
       return (
         <div className='container flex w-[1200px] h-[640px] justify-center items-center '>
         <div className='w-1/2'>

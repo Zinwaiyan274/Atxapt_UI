@@ -1,5 +1,68 @@
 {
-    "swimming":0,
-    "pool":1,
-    "telegram":1
+  "answers": [
+    {
+      "question1": [
+        "Elevators"
+      ],
+      "question2": [
+        "Coffee Bar"
+      ],
+      "question3": [
+        "Bike Trails",
+        "Fitness Center",
+        "Basketball Court"
+      ],
+      "question4": [],
+      "id": 1
+    },
+    {
+      "question1": [],
+      "question2": [],
+      "question3": [],
+      "question4": [],
+      "id": 2
+    },
+    {
+      "question1": [
+        "EV Charger"
+      ],
+      "question2": [
+        "Game Room",
+        "Club house/Resident Lounge"
+      ],
+      "question3": [
+        "Walking/Running"
+      ],
+      "question4": [],
+      "id": 3
+    },
+    {
+      "question1": [],
+      "question2": [],
+      "question3": [],
+      "question4": [],
+      "id": 4
+    },
+    {
+      "question1": [],
+      "question2": [],
+      "question3": [],
+      "question4": [],
+      "id": 5
+    },
+    {
+      "question1": [],
+      "question2": [],
+      "question3": [],
+      "question4": [],
+      "id": 6
+    },
+    {
+      "question1": [],
+      "question2": [],
+      "question3": [],
+      "question4": [],
+      "id": 7
+    }
+  ]
 }

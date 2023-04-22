@@ -16,7 +16,7 @@ const Stepper = ({questions}) => {
               
               <>
               <li key={index} className={`flex w-full items-center text-blue-600 dark:text-blue-500 after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-${currentQuestionIndex == index ? 'red': 'gray'}-800`}></li>
-              {/* <li key={index} className={`flex w-full items-center text-blue-600 dark:text-blue-500 after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-${currentQuestionIndex == index ? 'red' : "gray"}-800`}></li> */}
+              
               </>
               
               // console.log(`${key}+${index}`) 

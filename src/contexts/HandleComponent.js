@@ -4,9 +4,8 @@ export const ComponentContext = createContext()
 
 export const ComponentContextProvider = ({children})=>{
     const [isChange,setIsChange] = useState(0)
-    const [isResult,setIsResult] = useState(false)
     return (
-        <ComponentContext.Provider value={[isChange,setIsChange,isResult,setIsResult]}>
+        <ComponentContext.Provider value={[isChange,setIsChange]}>
             {children}
         </ComponentContext.Provider>
     )

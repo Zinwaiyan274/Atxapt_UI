@@ -6,15 +6,19 @@ import { useContext } from 'react';
 import { StepContext, useStepContext } from '../../contexts/StepContext';
 import { FormDataContext } from '../../contexts/FormContext';
 import { ComponentContext } from '../../contexts/HandleComponent';
+import { ResultContext } from '../../contexts/ResultContext';
+import { questionsForCommunity } from '../QuestionSets';
 
-function FristForm({questions}) {
+function Combine({questions}) {
 
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] =  useContext(StepContext);
   const [isChange,setIsChange] = useContext(ComponentContext)
-  const [isResult,setIsResult] = useContext(ComponentContext)
+  const [isResult,setIsResult] = useContext(ResultContext)
   const [formData,setFormData] = useContext(FormDataContext)
   const formDataArray = Object.keys(formData)
+  const questionForString = JSON.stringify(questions)
+  const currentquestionForString = JSON.stringify(questionsForCommunity)
   function handleChoiceClick(e) {
     e.preventDefault()
     const value = e.target.value 
@@ -27,46 +31,55 @@ function FristForm({questions}) {
     }
     
   }
-  console.log(choices);
   function handleNextClick() {
-    // setFormData()
-    setFormData(prev => [...prev,choices])
+    updateFormData(currentQuestionIndex,choices)
     // setIsChange(prev => prev + 1)
-    if(isChange + 1 === questions.length){
+    if(isChange === questions.length){
       setCurrentQuestionIndex(0)
+      console.log("error1")
     }
     else if(isChange > questions.length){
       setCurrentQuestionIndex(prev => prev + 1)
+      console.log("error1");
     }
     else{
       setIsChange(prev => prev + 1)
       setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+      console.log("error3");
     }
   }
-  console.log(questions.length);
-  console.log(isChange + 'ischange');
-
+  const updateFormData = (questionNumber, choicesData) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [`question${questionNumber+1}`]: choicesData,
+    }));
+  };
   function handlePrevClick() {
     setCurrentQuestionIndex(prevIndex => prevIndex - 1);
   }
   console.log(currentQuestionIndex);
   function handleSubmit(e) {
     e.preventDefault()
-    setFormData(prev => [...prev,choices])
     setIsChange(prev => 0)
-    setIsResult(!isResult)
-    // fetch('/api/recommendations', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(choices),
-    // })
-    //   .then(response => response.json())
-    //   .then(data => console.log(data))
-    //   .catch(error => console.error(error));
+    setIsResult(true)
+    fetch('http://localhost:4000/answers', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(formData)
+})
+  .then(response => response.json())
+  .then(result => {
+    console.log('Data posted successfully:', result);
+  })
+  .catch(error => {
+    console.error('Error posting data:', error);
+  });
   }
-
+  console.log(formData);
+  console.log(currentQuestionIndex);
   
-
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
@@ -85,7 +98,7 @@ function FristForm({questions}) {
         {currentQuestionIndex > 0 && (
           <ButtonStyleTwo onClick={handlePrevClick} text={'Back'} />
         )}
-        {currentQuestionIndex < questions.length - 1   ? (
+        { questionForString === currentquestionForString   ? (
           <ButtonStyleOne onClick={handleNextClick} text={"Continue"} />
           ) : (
           <ButtonStyleOne onClick={handleSubmit} text={"Submit"} />
@@ -97,7 +110,7 @@ function FristForm({questions}) {
   );
 }
 
-export default FristForm;
+export default Combine;
 
 const Choice = ({ text, onClick,value }) => {
   return (
