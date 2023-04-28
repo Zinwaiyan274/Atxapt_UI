@@ -1,1 +1,6 @@
 export {default as image_1} from '../assets/images/img1.png'
+export {default as image_2} from '../assets/images/img2.png'
+export {default as buildingIcon} from '../assets/icons/Building.png'
+export {default as bathIcon} from '../assets/icons/bathTop.png'
+export {default as areaIcon} from '../assets/icons/area.png'
+export {default as locationIcon} from '../assets/icons/location.png'

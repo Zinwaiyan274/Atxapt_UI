@@ -5,64 +5,52 @@
         "Elevators"
       ],
       "question2": [
+        "Elevators",
         "Coffee Bar"
       ],
       "question3": [
-        "Bike Trails",
-        "Fitness Center",
-        "Basketball Court"
+        "Elevators",
+        "Coffee Bar",
+        "Tennis Court"
       ],
       "question4": [],
+      "question5": [],
+      "question6": [],
+      "question7": [],
+      "question8": [],
       "id": 1
     },
     {
-      "question1": [],
-      "question2": [],
-      "question3": [],
-      "question4": [],
-      "id": 2
-    },
-    {
       "question1": [
-        "EV Charger"
+        "Elevators"
       ],
       "question2": [
-        "Game Room",
-        "Club house/Resident Lounge"
+        "Elevators",
+        "Coffee Bar"
       ],
       "question3": [
-        "Walking/Running"
+        "Elevators",
+        "Coffee Bar",
+        "Tennis Court"
       ],
-      "question4": [],
-      "id": 3
-    },
-    {
-      "question1": [],
-      "question2": [],
-      "question3": [],
-      "question4": [],
-      "id": 4
-    },
-    {
-      "question1": [],
-      "question2": [],
-      "question3": [],
-      "question4": [],
-      "id": 5
-    },
-    {
-      "question1": [],
-      "question2": [],
-      "question3": [],
-      "question4": [],
-      "id": 6
-    },
-    {
-      "question1": [],
-      "question2": [],
-      "question3": [],
-      "question4": [],
-      "id": 7
+      "question4": [
+        "Elevators",
+        "Skyline Views"
+      ],
+      "question5": [
+        "Elevators",
+        "Skyline Views",
+        "Coffee Bar"
+      ],
+      "question6": [
+        "Elevators",
+        "Skyline Views",
+        "Coffee Bar",
+        "Fitness Center"
+      ],
+      "question7": [],
+      "question8": [],
+      "id": 2
     }
   ]
 }

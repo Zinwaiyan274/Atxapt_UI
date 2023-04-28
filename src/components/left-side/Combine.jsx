@@ -13,11 +13,11 @@ function Combine({questions}) {
 
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] =  useContext(StepContext);
-  const [isChange,setIsChange] = useContext(ComponentContext)
-  const [isResult,setIsResult] = useContext(ResultContext)
-  const [formData,setFormData] = useContext(FormDataContext)
-  const formDataArray = Object.keys(formData)
-  const questionForString = JSON.stringify(questions)
+  const [isChange,setIsChange] = useContext(ComponentContext);
+  const [isResult,setIsResult] = useContext(ResultContext);
+  const [formData,setFormData] = useContext(FormDataContext);
+  const formDataArray = Object.keys(formData);
+  const questionForString = JSON.stringify(questions);
   const currentquestionForString = JSON.stringify(questionsForCommunity)
   function handleChoiceClick(e) {
     e.preventDefault()
@@ -34,19 +34,14 @@ function Combine({questions}) {
   function handleNextClick() {
     updateFormData(currentQuestionIndex,choices)
     // setIsChange(prev => prev + 1)
-    if(isChange === questions.length){
-      setCurrentQuestionIndex(0)
-      console.log("error1")
-    }
-    else if(isChange > questions.length){
-      setCurrentQuestionIndex(prev => prev + 1)
-      console.log("error1");
-    }
-    else{
-      setIsChange(prev => prev + 1)
+      
       setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+      if (setCurrentQuestionIndex === questionsForCommunity.length - 1){
+        setIsChange(false)
+        setCurrentQuestionIndex(1)
+        console.log("error for isChange");
+      }
       console.log("error3");
-    }
   }
   const updateFormData = (questionNumber, choicesData) => {
     setFormData((prevFormData) => ({
@@ -58,6 +53,7 @@ function Combine({questions}) {
     setCurrentQuestionIndex(prevIndex => prevIndex - 1);
   }
   console.log(currentQuestionIndex);
+  console.log(isChange);
   function handleSubmit(e) {
     e.preventDefault()
     setIsChange(prev => 0)
@@ -77,8 +73,6 @@ function Combine({questions}) {
     console.error('Error posting data:', error);
   });
   }
-  console.log(formData);
-  console.log(currentQuestionIndex);
   
   const currentQuestion = questions[currentQuestionIndex];
 
