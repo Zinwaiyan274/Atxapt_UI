@@ -16,8 +16,8 @@ const App = () => {
               {
                 isResult ? <Result /> : <Form />
               }
-              {/* <Form />
-              <Result/> */}
+              {/* <Form /> */}
+              {/* <Result/> */}
             </div>
           </main>
         

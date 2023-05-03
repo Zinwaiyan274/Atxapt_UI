@@ -5,53 +5,68 @@ import Stepper from "./Stepper";
 import Question from "./Question";
 import Choice from "./Choice";
 import { ResultContext } from "../../contexts/ResultContext";
+import { ResultFormContext } from "../../contexts/resultFormContext";
 const SecondForm = ({ handleClick, questions }) => {
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [formData, setFormData] = useContext(FormDataContext);
+  const [isForm,setForm] = useContext(ResultFormContext)
   const [isResult,setIsResult] = useContext(ResultContext);
   function handleChoiceClick(e) {
-    e.preventDefault();
     const value = e.target.value;
     const checked = e.target.checked;
     if (checked) {
-        setChoices(prev => [...prev, value]);
+      
+      setChoices(prev => [...prev, value]);
     } else {
       setChoices(choices.filter((e) => (e !== value)));
     }
   }
   function handleNextClick() {
-    updateFormData(currentQuestionIndex, choices);
+    // updateFormData(currentQuestionIndex,choices)
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   }
+  console.log(choices);
   function handlePrevClick() {
     setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
   }
   const updateFormData = (questionNumber, choicesData) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [`question${questionNumber + 4}`]: choicesData,
+      [`question${questionNumber + 5}`]: choicesData,
     }));
   };
+  const setData = (choicesData) =>{
+    setFormData((pre)=>({
+      ...pre,['question2']:choicesData
+    }))
+  }
+  const string = {
+    "question1":["Swimming Pool","BBQ Grill","Gameroom","Skyline Views","EV Charger"],
+    "question2":["Allow Pets","Dog Park", "Fire Place","Garage Parking","Bike Stalls"]
+  }
+    
     function handleSubmit(e) {
       e.preventDefault();
       setIsResult(true)
-      fetch("http://localhost:4000/answers", {
+      setData(choices)
+      // updateFormData(currentQuestionIndex, choices);
+      fetch("http://localhost:5000/api/recommender", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(string),
       })
         .then((response) => response.json())
         .then((result) => {
-          console.log("Data posted successfully:", result);
+          console.log("Data posted successfully:", setForm(result));
         })
         .catch((error) => {
-          console.error("Error posting data:", error);
+          console.error("Error posting data:", error,formData);
         });
     }
-  
+  console.log(formData);
   const currentQuestion = questions[currentQuestionIndex];
   return (
     <div className="container flex w-[1200px] h-[640px] justify-center items-center overflow-hidden ">
@@ -64,8 +79,29 @@ const SecondForm = ({ handleClick, questions }) => {
         <div>
           <Stepper questions={questions} currentIndex={currentQuestionIndex} />
           <Question text={currentQuestion.text}>
-            {currentQuestion.questions.map((question, key) => (
-              <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
+          {currentQuestion.questions.text.map((question, key) => (
+              // <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
+              <div className="flex flex-col items-center border border-red-500  rounded  justify-center dark:border-red-700 bg-red-100 h-32 w-full relative">
+                <input
+                  key={key}
+                  type="checkbox"
+                  onClick={handleChoiceClick}
+                  value={question}
+                  className="absolute top-2 left-3 w-4 h-4 text-red-600 bg-gray-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                {currentQuestion.questions.icons.map(
+                  (icon, i) =>
+                  i === key && (
+                    <img
+                    src={icon}
+                    alt=""
+                    className="object-cover w-10 h-10  top-6 left-20"
+                    key={i}
+                    />
+                    )
+                    )}
+                    <label className=" text-center mt-2 px-5 text-sm w-full">{question}</label>
+              </div>
             ))}
           </Question>
           <div className="flex justify-between mt-5">

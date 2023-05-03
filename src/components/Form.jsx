@@ -20,7 +20,11 @@ const Form = () => {
     switch(isChange){
       case 0:
         return(
+          <>
           <FirstForm handleClick={changeHandle} questions={questionsForCommunity} />
+          {/* <Combine questions={questionsForCommunity} /> */}
+          </>
+          
         )
       case 1:
         return(

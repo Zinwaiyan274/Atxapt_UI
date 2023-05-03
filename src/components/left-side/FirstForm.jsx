@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { image_1 } from "..";
+import { carChangerIcon, image_1 } from "..";
 import { FormDataContext } from "../../contexts/FormContext";
 import Stepper from "./Stepper";
 import Question from "./Question";
@@ -8,18 +8,21 @@ const FirstForm = ({ handleClick, questions }) => {
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [formData, setFormData] = useContext(FormDataContext);
+  const [isChecking, setIsChecking] = useState(false);
   function handleChoiceClick(e) {
-    e.preventDefault();
+    
     const value = e.target.value;
-    const checked = e.target.checked;
+    let checked = e.target.checked;
+    console.log(value)
     if (checked) {
-        setChoices(prev => [...prev, value]);
+      // updateFormData(currentQuestionIndex, value);
+      setChoices((prev) => [...prev, value]);
     } else {
-      setChoices(choices.filter((e) => (e !== value)));
+      setChoices(choices.filter((e) => e !== value));
     }
   }
   function handleNextClick() {
-    updateFormData(currentQuestionIndex, choices);
+    // updateFormData(currentQuestionIndex,choices)
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   }
   function handlePrevClick() {
@@ -31,25 +34,34 @@ const FirstForm = ({ handleClick, questions }) => {
       [`question${questionNumber + 1}`]: choicesData,
     }));
   };
-    function handleSubmit(e) {
-      e.preventDefault();
-      handleClick()
-      fetch("http://localhost:4000/answers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-        .then((response) => response.json())
-        .then((result) => {
-          console.log("Data posted successfully:", result);
-        })
-        .catch((error) => {
-          console.error("Error posting data:", error);
-        });
-    }
-  
+  const setData = (choicesData) =>{
+    setFormData((pre)=>({
+      ...pre,['question1']:choicesData
+    }))
+  }
+  console.log(formData);
+  console.log(choices);
+  function handleSubmit(e) {
+    e.preventDefault();
+    handleClick();
+    setData(choices)
+    // updateFormData(currentQuestionIndex, choices);
+    // fetch("http://localhost:5000/api/recommender", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(formData),
+    // })
+    //   .then((response) => response.json())
+    //   .then((result) => {
+    //     console.log("Data posted successfully:", result);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error posting data:", error);
+    //   });
+  }
+
   const currentQuestion = questions[currentQuestionIndex];
   return (
     <div className="container flex w-[1200px] h-[640px] justify-center items-center overflow-hidden ">
@@ -62,14 +74,36 @@ const FirstForm = ({ handleClick, questions }) => {
         <div>
           <Stepper questions={questions} currentIndex={currentQuestionIndex} />
           <Question text={currentQuestion.text}>
-            {currentQuestion.questions.map((question, key) => (
-              <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
+            {currentQuestion.questions.text.map((question, key) => (
+              // <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
+              <div className="flex flex-col items-center border border-red-500   rounded  justify-center dark:border-red-700 bg-red-100 h-32 w-full relative">
+                <input
+                  type="checkbox"
+                  onClick={handleChoiceClick}
+                  value={question}
+                  className="absolute top-2 left-3 w-4 h-4 text-red-600 bg-blue-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                {currentQuestion.questions.icons.map(
+                  (icon, i) =>
+                  i === key && (
+                    <img
+                    src={icon}
+                    alt=""
+                    className="object-cover w-10 h-10  top-6 left-20"
+                    key={i}
+                    />
+                    )
+                    )}
+                    <label className=" text-center mt-2 px-5 text-sm w-full">{question}</label>
+                    
+              </div>
             ))}
+            
           </Question>
           <div className="flex justify-between mt-5">
             {currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />}
-            
-            {currentQuestionIndex < questions.length -1 ? (
+
+            {currentQuestionIndex < questions.length - 1 ? (
               <ButtonStyleOne onClick={handleNextClick} text={"Continue"} />
             ) : (
               <ButtonStyleOne onClick={handleSubmit} text={"Continue"} />

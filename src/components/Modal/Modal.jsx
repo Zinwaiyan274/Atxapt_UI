@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { areaIcon, bathIcon, buildingIcon, image_1, image_2, locationIcon } from "..";
 import { data } from "autoprefixer";
 import { datas } from "../../datas";
-const Modal = ({ show, setShow,index }) => {
+const Modal = ({ show, setShow,index ,props }) => {
   const textColor = "#B14B3C"
-  const [selectImg,setSelectImg] = useState(datas[index]?.images[0])
+  const [selectImg,setSelectImg] = useState(props.images[0])
   const selectClick = (index)=>{
-    setSelectImg(datas[index]?.images[index])
+    setSelectImg(props.images[index])
   }
   return (
     <>
@@ -16,7 +16,7 @@ const Modal = ({ show, setShow,index }) => {
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}
             <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-              <h3 className="text-3xl text-secondary font-semibold">Forest Bangalore</h3>
+              <h3 className="text-3xl text-secondary font-semibold">{props.title}</h3>
             </div>
             {/*body*/}
             <div className="relative p-10 flex">
@@ -25,7 +25,7 @@ const Modal = ({ show, setShow,index }) => {
                 <div className=" w-[142px] h-[90px] justify-between flex mt-4 ">
   
                   {
-                    datas[index]?.images.map((img,index)=>(
+                    props.images.map((img,index)=>(
                       <img key={index} src={img} alt="" className=" object-cover me-2 cursor-pointer" onClick={()=>selectClick(index)} />
 
                     ))
@@ -33,7 +33,7 @@ const Modal = ({ show, setShow,index }) => {
                 </div>
               </div>
               <div className="w-1/2 ">
-                {datas[index]?.features.map((item) => (
+                {props.features.map((item) => (
                   <div className="flex mb-2 gap-2">
                     <div
                       class=" w-7 h-7 rounded-full p-1 flex items-center justify-center
@@ -46,7 +46,7 @@ const Modal = ({ show, setShow,index }) => {
                 ))}
                 <h2>Price</h2>
                 <p className={`text-4xl text-[${textColor}] font-extrabold mb-2 mt-2`}>
-                  $ {datas[index]?.cost.start} - $ {datas[index]?.cost.end}
+                  $ {props.cost.start} - $ {props.cost.end}
                 </p>
                 <a
                   href="#_"
@@ -55,7 +55,7 @@ const Modal = ({ show, setShow,index }) => {
                   Connect with Agent
                 </a>
                 <a
-                  href="#_"
+                  href={props.siteLink} target="__blank"
                   class={`relative px-5 py-3 overflow-hidden font-medium text-[${textColor}] bg-gray-100 border border-gray-100 rounded-lg shadow-inner group mx-4` } onClick={() => setShow(false)}
                 >
                   <span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
@@ -64,7 +64,7 @@ const Modal = ({ show, setShow,index }) => {
                   <span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
                   <span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
                   <span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
-                    Connect with Owner
+                    View Details
                   </span>
                 </a>
               </div>
