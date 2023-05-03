@@ -84,7 +84,7 @@ function Combine({questions}) {
 
   return (
     <div>
-      <Stepper questions={questions} currentIndex={currentQuestionIndex} />
+      {/* <Stepper questions={questions} currentIndex={currentQuestionIndex} /> */}
       <Question text={currentQuestion.text}>
         {/* {currentQuestion.questions.text.map(( question,key) => (
           <Choice

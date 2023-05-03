@@ -17,9 +17,9 @@ const ResultForm = () => {
   // const list = isForm;
   const list = isForm
   console.log(isForm);
-  const listKeys = Object.keys(list)
+  const listKeys = Object.values(list)
   const listlength = listKeys.length
-  console.log(list);
+  // console.log(list);
   return (
     <div className=" w-[1200px] h-screen justify-center items-center mx-auto">
       <div className="w-full mb-5">
@@ -32,11 +32,12 @@ const ResultForm = () => {
       <div className="w-full  bg-dark">
         <motion.div layout className="grid grid-cols-2 gap-2  md:grid-cols-3 max-h-[500px] scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-light overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
           {listKeys.map((key,index) => {
-            const id = list[key];
+            const id = key;
             const item = datas.find((data) => data.id === id);
-            console.log(index);
+            // console.log(key);
+            // console.log(item);
             if (item) {
-              return <Card key={key} img={item.img} number={index + 1} id={item.id} props={item} />;
+              return <Card key={index} img={item.img} number={index + 1} id={item.id} props={item} />;
             } else {
               return null;
             }
