@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import pandas as pd
 from collections import OrderedDict
-from flask_mysqldb import MySQL 
+
 
 #----------Preprocessing----------------------------
 df = pd.read_excel('A.L.I2.xlsx')
@@ -17,12 +17,6 @@ df_new = df.iloc[:,1:]
 #----------------------config-------------------------
 app = Flask(__name__)
 cors = CORS(app)
-mysql = MySQL(app)
-
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '1234'
-app.config['MYSQL_DB'] = 'test'
 
 #--------------***end of config***--------------------
 
