@@ -13,10 +13,12 @@ const Modal = ({ show, setShow,index ,props }) => {
       <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto  fixed inset-0 z-50 outline-none focus:outline-none">
         <div className="relative max-w-7xl h-screen my-6 mx-auto">
           {/*content*/}
+        <form action="mailto:minphonet6@gmail.com" method="post" encType="text/plain">
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}
             <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
               <h3 className="text-3xl text-secondary font-semibold">{props.title}</h3>
+              <button onClick={()=>setShow(false)}>Close</button>
             </div>
             {/*body*/}
             <div className="relative p-10 flex">
@@ -49,10 +51,11 @@ const Modal = ({ show, setShow,index ,props }) => {
                   $ {props.cost.start} - $ {props.cost.end}
                 </p>
                 <a
-                  href="#_"
-                  class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-[#B14B3C] rounded-none hover:bg-gray-800 focus:shadow-outline focus:outline-none" onClick={() => setShow(false)}
+                  href="tel:+95259661223"
+                  class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-[#B14B3C] rounded-none hover:bg-gray-800 focus:shadow-outline focus:outline-none" 
                 >
-                  Connect with Agent
+            
+                  <input type="submit" value='Connect with Agent' />
                 </a>
                 <a
                   href={props.siteLink} target="__blank"
@@ -67,11 +70,14 @@ const Modal = ({ show, setShow,index ,props }) => {
                     View Details
                   </span>
                 </a>
+                
               </div>
+             
             </div>
             {/*footer*/}
             
           </div>
+          </form>
         </div>
       </div>
       <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>

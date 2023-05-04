@@ -6,6 +6,7 @@ import Question from "./Question";
 import Choice from "./Choice";
 import { ResultContext } from "../../contexts/ResultContext";
 import { ResultFormContext } from "../../contexts/resultFormContext";
+import { motion } from "framer-motion";
 const SecondForm = ({ handleClick, questions }) => {
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -51,7 +52,7 @@ const SecondForm = ({ handleClick, questions }) => {
       setIsResult(true)
       setData(choices)
       // updateFormData(currentQuestionIndex, choices);
-      fetch("http://localhost:5000/api/recommender", {
+      fetch("https://server.atxapt.com/api/recommender", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +70,7 @@ const SecondForm = ({ handleClick, questions }) => {
   console.log(formData);
   const currentQuestion = questions[currentQuestionIndex];
   return (
-    <div className="container flex w-[1200px] h-[640px] justify-center items-center overflow-hidden ">
+    <motion.div initial={{width:0}} animate={{width:'1200px'}} exit={{x:window.innerWidth}} className="container flex w-[1200px] h-[640px] justify-center items-center overflow-hidden ">
       <div className="w-1/2">
         <p className=" text-4xl text-secondary">Select Your Pace</p>
         <p className=" text-base text-secondary">In building Amertic</p>
@@ -119,7 +120,7 @@ const SecondForm = ({ handleClick, questions }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

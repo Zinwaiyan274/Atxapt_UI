@@ -8,6 +8,8 @@ import { useState } from "react";
 import { questionsForCommunity, questionsForPlace } from "./QuestionSets";
 import FirstForm from "./left-side/FirstForm";
 import SecondForm from "./left-side/SecondForm";
+import { motion } from "framer-motion";
+import TestForm from "./left-side/testForm";
 
 const Form = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useContext(StepContext);
@@ -23,6 +25,7 @@ const Form = () => {
           <>
           <FirstForm handleClick={changeHandle} questions={questionsForCommunity} />
           {/* <Combine questions={questionsForCommunity} /> */}
+          {/* <TestForm handleClick={changeHandle} questions={questionsForCommunity} /> */}
           </>
           
         )
