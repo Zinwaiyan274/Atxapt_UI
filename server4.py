@@ -74,11 +74,9 @@ def get_apartments():
    
     cursor.execute("""SELECT * FROM apartments""")
     rows = cursor.fetchall()
-    # num_fields = len(cursor.description)
-    #field_names = [i[0] for i in cursor.description]
     my_df = pd.DataFrame(rows, columns=[column[0] for column in cursor.description])
     df_cleaned = my_df.iloc[:,1:]
-    user_inputs = [0,0,1,1,1,1,1,1,0,0,0,1,1,0,1,1,1,0,1,1,0,0,1,1,1,1,0,0,1,0,1]
+   
     result = get_recommendations(user_inputs,df_cleaned)
     return jsonify(result)
 
