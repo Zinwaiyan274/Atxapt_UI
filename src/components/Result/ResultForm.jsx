@@ -17,24 +17,24 @@ const ResultForm = () => {
   const list = isForm;
   const listKeys = Object.values(list);
   const listlength = listKeys.length;
-  console.log(list);
+  
   return (
-    <motion.div initial={{width:0}} animate={{width:'1200px'}} exit={{x:window.innerWidth}} className=" w-[1200px] h-screen justify-center items-center mx-auto">
-      <div className="w-full mb-5">
-        <p className=" text-4xl text-secondary mb-2">Final Matching Home Lists</p>
-        <p className=" text-base text-dark w-[565px] ">
+    <motion.div initial={{width:0}} animate={{width:'1200px'}} exit={{x:window.innerWidth}} className=" w-full h-screen justify-center items-center mx-auto ">
+      <div className="w-screen mb-5">
+        <p className=" text-4xl mb-6 text-secondary font-semibold">Final Matching Home Lists</p>
+        <p className=" text-base text-dark w-[565px] mb-10 ">
           vulputate augue hendrerit in ipsum dolore autem praesent luptatum dolor feugait feugiat
           suscipit nonummy dolore exerci qui sit{" "}
         </p>
       </div>
-      <div className="w-full  bg-dark">
+      <div className="w-screen bg-dark">
         <motion.div
           layout
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -10, opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="grid grid-cols-2 gap-2  md:grid-cols-3 max-h-[500px] scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-light overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+          className="grid grid-cols-2 gap-4 w-full mx-2  md:grid-cols-3 h-auto md:max-h-[500px] scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-light overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
         >
           {listKeys.map((key, index) => {
             const id = key;

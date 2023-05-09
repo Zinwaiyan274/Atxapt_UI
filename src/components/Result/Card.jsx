@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { image_1, vectorIcon } from "..";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ const Card = ({ img, number, id, props }) => {
         transition={{ duration: 0.5 }}
         href="#"
         onClick={(e) => setShowModal(true)}
-        class=" relative w-full md:w-[331px] h-auto mb-5  items-center bg-white border border-gray-200 shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-red-700 
+        class=" relative w-50 md:w-[331px] h-auto mb-5 items-center text-white  transition-all duration-200 border border-gray-200 shadow md:flex-row hover:bg-gray-200 dark:border-gray-700 bg-secondary 
         dark:hover:bg-red-800"
       >
         {number <= 5 ? (
@@ -38,7 +38,7 @@ const Card = ({ img, number, id, props }) => {
         <img class="object-cover w-full h-auto md:h-[291px] md:w-full " src={img} alt="" />
         <div class="flex flex-col justify-between p-4 leading-normal">    
           <a href="#" onClick={() => setShowModal(true)}>
-            <h5 class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="mb-2 text-base font-bold tracking-tight ">
               {props.title}
             </h5>
           </a>

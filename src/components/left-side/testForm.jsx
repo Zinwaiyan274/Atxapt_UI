@@ -5,15 +5,18 @@ import Stepper from "./Stepper";
 import Question from "./Question";
 import Choice from "./Choice";
 import { motion } from "framer-motion";
-const TestForm = ({ handleClick, questions }) => {
+const FirstForm = ({ handleClick, questions }) => {
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [formData, setFormData] = useContext(FormDataContext);
   const [isChecking, setIsChecking] = useState(false);
+  const [selectedValues, setSelectedValues] = useState([]);
   function handleChoiceClick(e) {
+    
     const value = e.target.value;
     let checked = e.target.checked;
     if (checked) {
+      // updateFormData(currentQuestionIndex, value);
       setChoices((prev) => [...prev, value]);
     } else {
       setChoices(choices.filter((e) => e !== value));
@@ -21,6 +24,7 @@ const TestForm = ({ handleClick, questions }) => {
   }
   function handleNextClick() {
     // updateFormData(currentQuestionIndex,choices)
+    setData(choices)
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   }
   function handlePrevClick() {
@@ -32,18 +36,17 @@ const TestForm = ({ handleClick, questions }) => {
       [`question${questionNumber + 1}`]: choicesData,
     }));
   };
-  const setData = (choicesData) => {
-    setFormData((pre) => ({
-      ...pre,
-      ["question1"]: choicesData,
-    }));
-  };
+  const setData = (choicesData) =>{
+    setFormData((pre)=>({
+      ...pre,['question1']:choicesData
+    }))
+  }
   console.log(formData);
   console.log(choices);
   function handleSubmit(e) {
     e.preventDefault();
     handleClick();
-    setData(choices);
+    setData(choices)
     // updateFormData(currentQuestionIndex, choices);
     // fetch("http://localhost:5000/api/recommender", {
     //   method: "POST",
@@ -60,80 +63,10 @@ const TestForm = ({ handleClick, questions }) => {
     //     console.error("Error posting data:", error);
     //   });
   }
-
-  const ShowForm = () => {
-    console.log(questions[0].questions.text);
-    switch (currentQuestionIndex) {
-      case 0:
-        return (
-          <Question text={questions[0].text}>
-            {questions[0].questions.text.map((question,key) => (
-              // <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
-              <div className="flex flex-col items-center border border-red-500   rounded  justify-center dark:border-red-700 bg-red-100 h-32 w-full relative">
-                <input
-                  type="checkbox"
-                  onClick={handleChoiceClick}
-                  value={question}
-                  className="absolute top-2 left-3 w-4 h-4 text-red-600 bg-blue-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                
-                {questions[0].questions.icons.map(
-                  (icon, i) =>
-                    i === key && (
-                      <img
-                        src={icon}
-                        alt=""
-                        className="object-cover w-10 h-10  top-6 left-20"
-                        key={i}
-                      />
-                    )
-                )}
-
-                <label className=" text-center mt-2 px-5 text-sm w-full">{question}</label>
-              </div>
-            ))}
-          </Question>
-        );
-        case 1:
-          return (
-            <Question text={questions[1].text}>
-              {questions[1].questions.text.map((question,key) => (
-                // <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
-                <div className="flex flex-col items-center border border-red-500   rounded  justify-center dark:border-red-700 bg-red-100 h-32 w-full relative">
-                  <input
-                    type="checkbox"
-                    onClick={handleChoiceClick}
-                    value={question}
-                    className="absolute top-2 left-3 w-4 h-4 text-red-600 bg-blue-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  
-                  {questions[1].questions.icons.map(
-                    (icon, i) =>
-                      i === key && (
-                        <img
-                          src={icon}
-                          alt=""
-                          className="object-cover w-10 h-10  top-6 left-20"
-                          key={i}
-                        />
-                      )
-                  )}
   
-                  <label className=" text-center mt-2 px-5 text-sm w-full">{question}</label>
-                </div>
-              ))}
-            </Question>
-          );
-    }
-  };
   const currentQuestion = questions[currentQuestionIndex];
   return (
-    <motion.div
-      initial={{ width: 0 }}
-      animate={{ width: "1200px" }}
-      exit={{ x: window.innerWidth }}
-      className="container flex w-[1200px] h-[640px] justify-center items-center overflow-hidden "
-    >
+    <motion.div initial={{width:0}} animate={{width:'1200px'}} exit={{x:window.innerWidth}} className="container flex w-[1200px] h-[640px] justify-center items-center overflow-hidden ">
       <div className="w-1/2">
         <p className=" text-4xl text-secondary">Connect Community</p>
         <p className=" text-base text-secondary">In building Amertic</p>
@@ -142,7 +75,34 @@ const TestForm = ({ handleClick, questions }) => {
       <div className="w-1/2">
         <div>
           <Stepper questions={questions} currentIndex={currentQuestionIndex} />
-          <ShowForm />
+          <Question text={currentQuestion.text}>
+            {currentQuestion.questions.text.map((question, key) => (
+              // <Choice key={key} text={question} onClick={handleChoiceClick} value={question} />
+              <div className="flex flex-col items-center border border-red-500   rounded  justify-center dark:border-red-700 bg-red-100 h-32 w-full relative">
+                <input
+                  type="checkbox"
+                  onClick={handleChoiceClick}
+                  value={question}
+                  className="checkbox absolute top-2 left-3 w-4 h-4 text-red-600 bg-blue-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  checked={choices.includes(question)}
+                />
+                {currentQuestion.questions.icons.map(
+                  (icon, i) =>
+                  i === key && (
+                    <img
+                    src={icon}
+                    alt=""
+                    className="object-cover w-10 h-10  top-6 left-20"
+                    key={i}
+                    />
+                    )
+                    )}
+                    <label className=" text-center mt-2 px-5 text-sm w-full">{question}</label>
+                    
+              </div>
+            ))}
+            
+          </Question>
           <div className="flex justify-between mt-5">
             {currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />}
 
@@ -156,10 +116,9 @@ const TestForm = ({ handleClick, questions }) => {
       </div>
     </motion.div>
   );
-  
 };
 
-export default TestForm;
+export default FirstForm;
 
 const ButtonStyleOne = ({ text, onClick }) => {
   return (

@@ -5,6 +5,7 @@ export {default as bathIcon} from '../assets/icons/bathTop.png'
 export {default as areaIcon} from '../assets/icons/area.png'
 export {default as locationIcon} from '../assets/icons/location.png'
 export {default as vectorIcon} from '../assets/icons/Vector.png'
+export {default as leftArrow} from '../assets/icons/Arrow 1.png'
 
 // questionIcons 
 export {default as carChangerIcon} from '../assets/questionIcons/Car Charger.png'

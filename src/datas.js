@@ -45,6 +45,7 @@ export const datas = [
         "https://www.ariseriverside.com/wp-content/uploads/2021/04/ARISE-2-BR_0321-stack-300x273.jpg",
         "https://www.ariseriverside.com/wp-content/uploads/2021/04/ARISE-2-BR_0351-stack-253x300.jpg",
       ],
+      siteLink:"https://eastvueranch.com/",
       features: [
         {
           img: locationIcon,

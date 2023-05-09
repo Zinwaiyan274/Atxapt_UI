@@ -12,8 +12,8 @@ const App = () => {
   
   return (
     
-          <main className="w-full h-screen ">
-            <div className="flex items-center justify-center h-screen">
+          <main className="max-w-screen h-auto ">
+            <div className=" flex items-center justify-center overflow-x-hidden h-auto md:h-screen">
               <AnimatePresence>
               {
                 isResult ? <Result /> : <Form />
