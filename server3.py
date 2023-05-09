@@ -47,7 +47,7 @@ def ocr_result():
     for item in recommended_items:
         result_dict= OrderedDict()
         similarity_percent = similarity_scores[0][item] * 100
-        index_number = df.index[df['Unnamed: 0']==df.iloc[item,0]].tolist()[0]
+        index_number = df.index[df['Apartments']==df.iloc[item,0]].tolist()[0]
         result_dict["index"] = index_number
         
         result.append(result_dict)
