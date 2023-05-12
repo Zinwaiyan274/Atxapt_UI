@@ -73,6 +73,7 @@ const Modal = ({ show, setShow,index ,props }) => {
             
                   Connect with Agent
                 </a>
+                {/* <button onClick={handleSendEmail}>Send Email</button> */}
                 <a
                   href={props.siteLink} target="__blank"
                   class={`relative px-5 py-3 text-sm md:text-base  overflow-hidden font-medium text-[${textColor}] bg-gray-100 border border-gray-100 rounded-lg shadow-inner group mx-4` } onClick={() => setShow(false)}

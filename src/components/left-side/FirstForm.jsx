@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
-import { carChangerIcon, image_1, leftArrow } from "..";
+import { image_1 } from "..";
 import { FormDataContext } from "../../contexts/FormContext";
 import Stepper from "./Stepper";
 import Question from "./Question";
 import { ButtonStyleOne,ButtonStyleTwo } from "./buttonStyle";
-import Choice from "./Choice";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
@@ -32,12 +31,6 @@ const FirstForm = ({ handleClick, questions }) => {
   function handlePrevClick() {
     setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
   }
-  const updateFormData = (questionNumber, choicesData) => {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [`question${questionNumber + 1}`]: choicesData,
-    }));
-  };
   const setData = (choicesData) => {
     setFormData((pre) => ({
       ...pre,

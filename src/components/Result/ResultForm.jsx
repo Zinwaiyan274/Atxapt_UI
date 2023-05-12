@@ -1,22 +1,17 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./ResultForm.css";
-import { Pagination, Navigation, Scrollbar } from "swiper";
 import Card from "./Card";
-import { image_1 } from "..";
 import { datas } from "../../datas";
 import { useContext } from "react";
-import { ResultContext } from "../../contexts/ResultContext";
 import { ResultFormContext } from "../../contexts/resultFormContext";
 
 const ResultForm = () => {
   const [isForm, setForm] = useContext(ResultFormContext);
   const list = isForm;
   const listKeys = Object.values(list);
-  const listlength = listKeys.length;
   
   return (
     <motion.div initial={{width:0}} animate={{width:'1200px'}} exit={{x:window.innerWidth}} className=" w-full h-screen justify-center items-center mx-auto ">
@@ -27,7 +22,7 @@ const ResultForm = () => {
           suscipit nonummy dolore exerci qui sit{" "}
         </p>
       </div>
-      <div className="w-screen bg-dark">
+      <div className="w-screen md:w-full bg-dark">
         <motion.div
           layout
           initial={{ y: 10, opacity: 0 }}

@@ -3,10 +3,9 @@ import { image_2 } from "..";
 import { FormDataContext } from "../../contexts/FormContext";
 import Stepper from "./Stepper";
 import Question from "./Question";
-import Choice from "./Choice";
 import { ResultContext } from "../../contexts/ResultContext";
 import { ResultFormContext } from "../../contexts/resultFormContext";
-import { ButtonStyleOne,ButtonStyleTwo } from "./buttonStyle";
+import { ButtonStyleOne, ButtonStyleTwo } from "./buttonStyle";
 import { useSwipeable } from "react-swipeable";
 import { motion } from "framer-motion";
 const SecondForm = ({ handleClick, questions }) => {
@@ -32,12 +31,15 @@ const SecondForm = ({ handleClick, questions }) => {
   function handlePrevClick() {
     setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
   }
-  const updateFormData = (questionNumber, choicesData) => {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [`question${questionNumber + 5}`]: choicesData,
-    }));
-  };
+  //--------------------------------------------------------------
+  //Testing with question 1 ,2 , 3, 4
+  // const updateFormData = (questionNumber, choicesData) => {
+  //   setFormData((prevFormData) => ({
+  //     ...prevFormData,
+  //     [`question${questionNumber + 5}`]: choicesData,
+  //   }));
+  // };
+  //-------------------------------------------------------------
   const setData = (choicesData) => {
     setFormData((pre) => ({
       ...pre,
@@ -58,19 +60,20 @@ const SecondForm = ({ handleClick, questions }) => {
     setIsResult(true);
     setData(choices);
     // updateFormData(currentQuestionIndex, choices);
-    fetch("http://127.0.0.1:5000/api/v1/recommender", {
+    fetch("http://127.0.0.1:5000/api/v2/recommender", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
+      mode: "cors",
     })
       .then((response) => response.json())
       .then((result) => {
         console.log("Data posted successfully:", setForm(result));
       })
       .catch((error) => {
-        console.error("Error posting data:", error, formData);
+        console.error("Error posting data:", error);
       });
   }
   const currentQuestion = questions[currentQuestionIndex];
@@ -132,9 +135,7 @@ const SecondForm = ({ handleClick, questions }) => {
             ))}
           </Question>
           <div className="flex justify-between mt-5">
-
             {currentQuestionIndex == 0 ? (
-              
               <ButtonStyleTwo onClick={() => handleClick()} text={"Back"} />
             ) : (
               currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />
@@ -152,4 +153,3 @@ const SecondForm = ({ handleClick, questions }) => {
 };
 
 export default SecondForm;
-
