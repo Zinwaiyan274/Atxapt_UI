@@ -60,7 +60,7 @@ const SecondForm = ({ handleClick, questions }) => {
     setIsResult(true);
     setData(choices);
     // updateFormData(currentQuestionIndex, choices);
-    fetch("https://match.atxapt.com/api/v2/recommender", {
+    fetch("https://server.atxapt.com/api/v2/recommender", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
