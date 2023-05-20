@@ -12,12 +12,18 @@ const ResultForm = () => {
   const [isForm, setForm] = useContext(ResultFormContext);
   const list = isForm;
   const listKeys = Object.values(list);
-  
   return (
-    <motion.div initial={{width:0}} animate={{width:'1200px'}} exit={{x:window.innerWidth}} className=" w-full h-screen justify-center items-center mx-auto ">
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "1200px" }}
+      exit={{ x: window.innerWidth }}
+      className=" w-full h-screen justify-center items-center md:mx-auto "
+    >
       <div className="w-screen mb-5">
-        <p className=" text-4xl mb-6 text-secondary font-semibold">Final Matching Home Lists</p>
-        <p className=" text-base text-dark w-[565px] mb-10 ">
+        <p className=" text-2xl md:text-4xl mt-6 mb-6 md:mb-10 text-secondary font-semibold">
+          Final Matching Home Lists
+        </p>
+        <p className=" text-sm md:text-base text-dark w-[565px] mb-10 md:mb-20 ">
           vulputate augue hendrerit in ipsum dolore autem praesent luptatum dolor feugait feugiat
           suscipit nonummy dolore exerci qui sit{" "}
         </p>
@@ -29,7 +35,7 @@ const ResultForm = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -10, opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="grid grid-cols-2 gap-4 w-full mx-2  md:grid-cols-3 h-auto md:max-h-[500px] scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-light overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+          className="grid grid-cols-2 gap-2 w-full mx-2  md:grid-cols-3 h-auto md:h-[700px] scrollbar-thin scrollbar-thumb-red-700 scrollbar-track-light overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
         >
           {listKeys.map((key, index) => {
             const id = key;

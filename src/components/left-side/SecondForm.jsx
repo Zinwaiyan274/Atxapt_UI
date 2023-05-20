@@ -76,6 +76,7 @@ const SecondForm = ({ handleClick, questions }) => {
         console.error("Error posting data:", error);
       });
   }
+  console.log(formData);
   const currentQuestion = questions[currentQuestionIndex];
   return (
     <motion.div
@@ -86,7 +87,9 @@ const SecondForm = ({ handleClick, questions }) => {
       className="container flex flex-col md:flex-row w-full h-full justify-center items-center overflow-hidden "
     >
       <div className="w-1/2">
-        <p className=" text-4xl font-semibold  mb-4 text-secondary">Select Your Pace</p>
+        <p className=" text-2xl md:text-4xl font-semibold mb-2 md:mb-4 text-secondary">
+          Select Your Pace
+        </p>
         <p className=" text-base font-normal mb-6 text-secondary">In building Amertic</p>
         <img src={image_2} alt="" />
       </div>
@@ -119,7 +122,7 @@ const SecondForm = ({ handleClick, questions }) => {
                         <img
                           src={icon}
                           alt=""
-                          className="object-cover w-10 h-10  top-6 left-20"
+                          className="object-cover  w-8 h-8 md:w-10 md:h-10   top-6 left-20"
                           key={i}
                         />
                       )
@@ -127,7 +130,7 @@ const SecondForm = ({ handleClick, questions }) => {
                 </label>
                 <label
                   htmlFor={`choice-${key}`}
-                  className=" text-center my-2 px-5 text-sm md:text-xs w-full"
+                  className=" text-center my-2 px-5 text-xs md:text-xs w-full"
                 >
                   {question}
                 </label>

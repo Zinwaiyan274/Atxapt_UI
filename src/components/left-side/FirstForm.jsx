@@ -3,7 +3,7 @@ import { image_1 } from "..";
 import { FormDataContext } from "../../contexts/FormContext";
 import Stepper from "./Stepper";
 import Question from "./Question";
-import { ButtonStyleOne,ButtonStyleTwo } from "./buttonStyle";
+import { ButtonStyleOne, ButtonStyleTwo } from "./buttonStyle";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
@@ -39,11 +39,11 @@ const FirstForm = ({ handleClick, questions }) => {
   };
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      handleNextClick();
-    }
-  },
-  onSwipedRight: () => handlePrevClick(),
+      if (currentQuestionIndex < questions.length - 1) {
+        handleNextClick();
+      }
+    },
+    onSwipedRight: () => handlePrevClick(),
   });
   function handleSubmit(e) {
     e.preventDefault();
@@ -60,7 +60,9 @@ const FirstForm = ({ handleClick, questions }) => {
       className="container flex flex-col md:flex-row w-full h-full justify-center items-center overflow-hidden "
     >
       <div className="w-1/2">
-        <p className=" text-4xl font-semibold  mb-4 text-secondary">Connect Community</p>
+        <p className=" text-2xl md:text-4xl font-semibold mb-2 md:mb-4 text-secondary">
+          Connect Community
+        </p>
         <p className=" text-base font-normal mb-6 text-secondary">In building Amertic</p>
         <img src={image_1} alt="" />
       </div>
@@ -74,9 +76,9 @@ const FirstForm = ({ handleClick, questions }) => {
           <Question text={currentQuestion.text}>
             {currentQuestion.questions.text.map((question, key) => (
               <div
-                className={`flex flex-col items-center border   rounded  justify-center border-red-700 ${
+                className={`flex flex-col items-center border  rounded  justify-center border-red-700 ${
                   choices.includes(question) ? "bg-red-100" : "bg-white"
-                } h-32 w-full relative`}
+                }  h-32 w-full relative`}
               >
                 <input
                   id={`choice-${key}`}
@@ -93,7 +95,7 @@ const FirstForm = ({ handleClick, questions }) => {
                         <img
                           src={icon}
                           alt=""
-                          className="object-cover w-10 h-10  top-6 left-20"
+                          className="object-cover w-8 h-8 md:w-10 md:h-10  top-6 left-20"
                           key={i}
                         />
                       )
@@ -101,7 +103,7 @@ const FirstForm = ({ handleClick, questions }) => {
                 </label>
                 <label
                   htmlFor={`choice-${key}`}
-                  className=" text-center my-2 px-5 text-sm md:text-xs w-full"
+                  className=" text-center my-2 px-5 text-xs md:text-xs w-full"
                 >
                   {question}
                 </label>
@@ -124,6 +126,3 @@ const FirstForm = ({ handleClick, questions }) => {
 };
 
 export default FirstForm;
-
-
-
