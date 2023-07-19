@@ -43,7 +43,7 @@ const SecondForm = ({ handleClick, questions }) => {
   const setData = (choicesData) => {
     setFormData((pre) => ({
       ...pre,
-      ["question2"]: choicesData,
+      question2: choicesData,
     }));
   };
   const swipeHandlers = useSwipeable({
@@ -76,7 +76,7 @@ const SecondForm = ({ handleClick, questions }) => {
         console.error("Error posting data:", error);
       });
   }
-  console.log(formData);
+
   const currentQuestion = questions[currentQuestionIndex];
   return (
     <motion.div
@@ -138,7 +138,7 @@ const SecondForm = ({ handleClick, questions }) => {
             ))}
           </Question>
           <div className="flex justify-between mt-5">
-            {currentQuestionIndex == 0 ? (
+            {currentQuestionIndex === 0 ? (
               <ButtonStyleTwo onClick={() => handleClick()} text={"Back"} />
             ) : (
               currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />

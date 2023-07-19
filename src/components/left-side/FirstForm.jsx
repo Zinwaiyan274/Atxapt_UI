@@ -34,7 +34,7 @@ const FirstForm = ({ handleClick, questions }) => {
   const setData = (choicesData) => {
     setFormData((pre) => ({
       ...pre,
-      ["question1"]: choicesData,
+      question1: choicesData,
     }));
   };
   const swipeHandlers = useSwipeable({
@@ -50,6 +50,7 @@ const FirstForm = ({ handleClick, questions }) => {
     handleClick();
     setData(choices);
   }
+
   const currentQuestion = questions[currentQuestionIndex];
   return (
     <motion.div

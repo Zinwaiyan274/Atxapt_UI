@@ -38,3 +38,6 @@ export {default as ceilingIcon} from '../assets/questionIcons/Ceiling Fan on.png
 export {default as petIcon} from '../assets/questionIcons/Pets.png'
 export {default as kitchenIcon} from '../assets/questionIcons/Kitchen Room.png'
 export {default as tumbleDryerIcon} from '../assets/questionIcons/Tumble Dryer.png'
+
+//Avatar icons
+export {default as avatar} from '../assets/icons/avatar.png'
