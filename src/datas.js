@@ -704,14 +704,14 @@ export const datas = [
   {
     id: 21,
     img: "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1050,h_700,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler-008w.jpg",
-    title: "Pressler 24 Flats",
+    title: "Pressler",
     text: "Pressler Apartments, nestled between 5th and 6th Street in Old West Austin, offers an exceptional living experience with a blend of comfort, style, and convenience. Boasting a central location, these premium apartments put residents just minutes away from Downtown Austin, Zilker Park, and the beautiful Lady Bird Lake.The residential complex offers a range of spacious studios, one and two bedroom apartments. The homes feature open floor plans, chic bamboo or stained concrete flooring, designer lighting, and stainless steel appliances. With added touches like granite countertops, tiled backsplashes, built-in bookcases, computer nooks, under-cabinet lighting and art niches, Pressler provides a unique blend of style and function.Residents can enjoy a myriad of on-site amenities, including one of the largest pool decks in Downtown Austin, a rooftop sundeck, a cozy business lounge, and a newly equipped 24-hour fitness center that offers towel service For added convenience, Pressler Apartments is home to a variety of retailers including Downtown Dental Design, Keystone Bank, Edible Arrangements, Cycle Bar, Alkusari Stone, Massage Envy, and Keith Kristofer Salon. These establishments ensure residents have easy access to everyday essentials right at their doorstep.",
     images: [
-      "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1125,h_750,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler-010w.jpg",
+      "https://resource.rentcafe.com/image/upload/x_0,y_0,w_900,h_581,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler%20007w.jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1238,h_825,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler-004w.jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0,w_2625,h_1750,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler-001w.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://www.liveatpressler.com/",
     features: [
       {
         img: locationIcon,
@@ -746,7 +746,7 @@ export const datas = [
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://www.rainieratx.com/24-flats",
     features: [
       {
         img: locationIcon,
@@ -781,7 +781,7 @@ export const datas = [
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://liveatecho.com/floorplans/",
     features: [
       {
         img: locationIcon,
@@ -807,16 +807,15 @@ export const datas = [
   },
   {
     id: 24,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://northshoreaustin.com/assets/images/cache/Northshore-POI-0151-b355dbdd89415ea0d5e859a5f6147b88.jpg",
     title: "Northshore Apartments",
     text: "Are you ready to live life at the next level? Northshore is the most desirable luxury high-rise in downtown Austin reaching new heights in high-rise living while offering modern finishes and upscale amenities.",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://northshoreaustin.com/assets/images/cache/northshore-residences-005w-b9744a23cac9b02c3d20123218b298a9.jpg",
+      "https://northshoreaustin.com/assets/images/cache/northshore-residences-001w-8fe22942e26e4f4733d9d8bd7ef31728.jpg",
+      "https://northshoreaustin.com/assets/images/cache/northshore-residences-002w-c28d5216f85e210a9fec4f51a6fe8dac.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://northshoreaustin.com/",
     features: [
       {
         img: locationIcon,
@@ -846,12 +845,12 @@ export const datas = [
     title: "3 Waller",
     text: "Imagine yourself here. East Vue Ranch provides the distinctive character of ATX mixed with the warm and welcoming hill country style that Texas is known for. Relax in comfort and convenience with brand new premium apartment finishes, exclusive amenities inspired by culture and community, and a neighborhood that exudes the creative and eclectic vibe of Austin.",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://3waller.com/assets/images/cache/3Waller-2nd-shoot-21-f6fc59ff3d37b6ecb4160bde72c2318c.jpg",
+      "https://3waller.com/assets/images/cache/Clubroom-Couches1-404b75951079e41ed12d1dc79734016e.jpg",
+      "https://3waller.com/assets/images/cache/Clubroom-Kitchen1-a0167289f7e82f3f79a5cc89dc0b8e04.jpg",
+      "https://3waller.com/assets/images/cache/Clubroom-Pool-Table-and-other11-86a0e01575cf8f6ad95508fa527edfe1.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://3waller.com/",
     features: [
       {
         img: locationIcon,
