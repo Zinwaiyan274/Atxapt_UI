@@ -109,7 +109,7 @@ export const datas = [
   },
   {
     id: 4,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://cdngeneralcf.rentcafe.com/dmslivecafe/2/84008/Copy%20of%20Monroe%20Linkedin%20post%20(Logo)%20(1).png?&quality=85",
     title: "The Monroe",
     text: "Take Heart Boutique, Riverside Golf Course, Lenoir Restaurant, East Co Shop",
     images: [
@@ -118,7 +118,7 @@ export const datas = [
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://themonroeatx.securecafe.com/onlineleasing/the-monroe1/floorplans.aspx",
     features: [
       {
         img: locationIcon,
@@ -321,16 +321,16 @@ export const datas = [
   },
   {
     id: 10,
-    img: "https://atxapt.com/wp-content/uploads/elementor/thumbs/sir-5-q24it98g4xkcs7orxz3d3lz4ae90dlm6nukx7swv5w.png",
+    img: "https://livesur512.com/themer/assets/logo/logo_main_1625772812.svg",
     title: "Sur512",
     text: "Description: With thirteen unique floor plan options, you are sure to find the perfect apartment home at SUR512. Our apartments near Downtown Austin feature one, two, and three-bedroom layouts fully-equipped with the highest standards of luxury living. Each apartment home offers a designer kitchen, wood-style flooring, designer pendant lighting, resort-style bathrooms, oversized bathtubs, a rainfall showerhead, an in-home washer and dryer, a pre-wire intrusion alarm, and a private patio or balcony.Location: Near Central Austin Apartment Types: One-bedroom, Two-bedroom, Three-bedroom With a seamless blend of next-level comforts and life-enriching activities, SUR512 South Austin Apartments provides an unbeatable atmosphere that is sure to make you feel right at home. Our extensive selection of amenities serves to enhance the lives of our residents, providing a relaxing retreat from the everyday grind. Come make the most of your down time with a dip in one of our two refreshing swimming pools, or spend time with friends in our outdoor lounge and community social spaces complete with a cozy fireplace. You can enjoy a carefree day at the community grilling and picnic areas, the perfect spot to host your next cookout or stay busy with our professional business center, conference room, and two state-of-the-art fitness centers. With our stylish resident clubhouse, convenient Internet café, and Wi-Fi service available in all our community’s common areas, your every need is taken care of at SUR512. ",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://livesur512.com/assets/images/cache/SUR512-pois-6-ec580c56112938756a66abc0144cccf8.jpg",
+      "https://livesur512.com/assets/images/cache/SUR512-pois-2-9292249b52f24a09dab04d3cc5100388.jpg",
+      "https://livesur512.com/assets/images/cache/gallery_Kitchen3-67858b34d2824b4edc87601b11431ccb.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink:
+      "https://livesur512.com/floorplans/?gclid=Cj0KCQjwk5ibBhDqARIsACzmgLSpM0xmgzblGp4xoBEXLuz0XP1SkUDUHLSu62Ub0Vzz-ZI_3JvndQkaAon-EALw_wcB",
     features: [
       {
         img: locationIcon,
@@ -566,16 +566,15 @@ export const datas = [
   },
   {
     id: 17,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://crescentaustin.com/assets/images/cache/gallery_banner_crescent_apartments_2961-c742ac99bf58f1c6d946cf22b0a758a6.jpg",
     title: "Crescent",
     text: "Welcome Home to Crescent! Start your new chapter at Crescent Apartments, a pet-friendly apartment community in the heart of South Congress. With easy access to the major shopping and entertainment district in downtown Austin, you will enjoy top-notch restaurants, great shopping and the best of Austin living. Revel in your new modern studio, one- or two-bedroom apartment, designed with cool, contemporary finishes that compliment your active lifestyle. Take advantage of Crescent Apartment's convenient location in SoCo near downtown Austin, TX and discover your dream urban lifestyle.",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://crescentaustin.com/assets/images/cache/the-crescent-003-6efe19189d96942b0c21bf743f28f7c4.jpg",
+      "https://crescentaustin.com/assets/images/cache/gallery_4_crescent_apartments_2961-9b0577714d9c027bfa067be61697c282.jpg",
+      "https://crescentaustin.com/assets/images/cache/gallery_5_crescent_apartments_2961-7dff2ebe47bb8c52d48b22c827b8b4e7.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://crescentaustin.com/floorplans/",
     features: [
       {
         img: locationIcon,
@@ -737,14 +736,14 @@ export const datas = [
   },
   {
     id: 22,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/24-flats-1-1920w.jpeg",
     title: "24 Flats Apartments",
     text: "Imagine yourself here. East Vue Ranch provides the distinctive character of ATX mixed with the warm and welcoming hill country style that Texas is known for. Relax in comfort and convenience with brand new premium apartment finishes, exclusive amenities inspired by culture and community, and a neighborhood that exudes the creative and eclectic vibe of Austin.",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/24-flats-2-1920w.jpeg",
+      "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/24-flats-1920w.jpeg",
+      "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/24+Flats+-+Efficiency+-+Living+Room-1920w.jpg",
+      "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/24+Flats+%283%29-1920w.png",
     ],
     siteLink: "https://www.rainieratx.com/24-flats",
     features: [
@@ -772,14 +771,13 @@ export const datas = [
   },
   {
     id: 23,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://liveatecho.com/assets/images/cache/HIGH-RES-PRINT-ONLY-IMG_9260-c4567c7cdf7f2b4e71b6b8077fedc2a5.jpg",
     title: "Echo Apartments",
     text: "- Introduces Echo Apartments as a desirable residential option located in North Central Austin's coveted Triangle District. Highlights the convenient proximity to local Austin dining and shopping favorites, The Domain, Downtown Austin, the University of Texas, parks, and jogging trails.  Emphasizes the availability of luxury one and two-bedroom floor plans to suit individual styles and tastes ",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://liveatecho.com/assets/images/cache/Living-Area-2-d197c5b7d4f9a23c39ff53e95dd574b8.jpg",
+      "https://liveatecho.com/assets/images/cache/Living-Area-3-a5092224815c1cb6c66837ffa6901745.jpg",
+      "https://liveatecho.com/assets/images/cache/Living-Area-4bd78e06b47ae3eb6ab716a3017b3da7.jpg",
     ],
     siteLink: "https://liveatecho.com/floorplans/",
     features: [
@@ -841,7 +839,7 @@ export const datas = [
   },
   {
     id: 25,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://3waller.com/assets/images/cache/3Waller-POI-00811-c6f89cb1765d8188fab603d465fa14b6.jpg",
     title: "3 Waller",
     text: "Imagine yourself here. East Vue Ranch provides the distinctive character of ATX mixed with the warm and welcoming hill country style that Texas is known for. Relax in comfort and convenience with brand new premium apartment finishes, exclusive amenities inspired by culture and community, and a neighborhood that exudes the creative and eclectic vibe of Austin.",
     images: [
@@ -876,16 +874,15 @@ export const datas = [
   },
   {
     id: 26,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://www.residencesatsaltillo.com/uploads/properties/logos/639x639G/12220/2_header_logo_2x.png?1549400879",
     title: "The Sonder ",
     text: "Imagine yourself here. East Vue Ranch provides the distinctive character of ATX mixed with the warm and welcoming hill country style that Texas is known for. Relax in comfort and convenience with brand new premium apartment finishes, exclusive amenities inspired by culture and community, and a neighborhood that exudes the creative and eclectic vibe of Austin.",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://www.residencesatsaltillo.com/uploads/images/images/800x497h/484476/7.jpg?1570754602",
+      "https://www.residencesatsaltillo.com/uploads/images/images/800x497h/484467/11.jpg?1570754582",
+      "https://www.residencesatsaltillo.com/uploads/images/images/800x497h/572140/CR-Saltillo8.22.19-2079-Edit-Edit.jpg?1594314733",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://www.residencesatsaltillo.com/",
     features: [
       {
         img: locationIcon,
@@ -1182,16 +1179,15 @@ export const datas = [
   },
   {
     id: 35,
-    img: "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_3005.jpg",
+    img: "https://arnoldaustin.com/assets/images/cache/The-Arnold-poi-021-e5f55f6253fd71190f5373b031c4fc90.jpg",
     title: "arnold apartments",
     text: "The Arnold apartments offers a vibrant eastside lifestyle where art and rhythm collide. It provides luxury amenities, designer finishes, superior customer service and an address conveniently located in the heart of it all.",
     images: [
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
+      "https://arnoldaustin.com/assets/images/cache/Dining-Living-1-71fe5a97f229f2b155de48692ba6d6c6.jpg",
+      "https://arnoldaustin.com/assets/images/cache/Bathroom-1-45fc55f5a46f631f1625eaf07ad32058.jpg",
+      "https://arnoldaustin.com/assets/images/cache/Bedroom-1-d827841ee77f6b7bffb130332e7cf95f.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://arnoldaustin.com/",
     features: [
       {
         img: locationIcon,
