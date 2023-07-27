@@ -24,8 +24,7 @@ const ResultForm = () => {
           Final Matching Home Lists
         </p>
         <p className=" text-sm md:text-base text-dark w-[565px] mb-10 md:mb-20 ">
-          vulputate augue hendrerit in ipsum dolore autem praesent luptatum dolor feugait feugiat
-          suscipit nonummy dolore exerci qui sit{" "}
+          Our machine-learning algorithm recommends these apartments according to your needs.{" "}
         </p>
       </div>
       <div className="w-screen md:w-full bg-dark">
