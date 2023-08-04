@@ -36,11 +36,9 @@ const Card = ({ img, number, id, props }) => {
         ) : null}
 
         <img className="object-cover w-full h-auto md:h-[291px] md:w-full " src={img} alt="" />
-        <div className="flex flex-col justify-between p-4 leading-normal">    
+        <div className="flex flex-col justify-between p-4 leading-normal">
           <a href="#" onClick={() => setShowModal(true)}>
-            <h5 className="mb-2 text-base font-bold tracking-tight ">
-              {props.title}
-            </h5>
+            <h5 className="mb-2 text-base font-bold tracking-tight ">{props.title}</h5>
           </a>
           <p className="mb-3 text-sm text-light dark:text-gray-100">{truncate(props.text, 200)}</p>
         </div>

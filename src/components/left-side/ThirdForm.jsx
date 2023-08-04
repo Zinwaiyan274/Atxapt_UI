@@ -1,47 +1,40 @@
 import React, { useContext, useState } from "react";
-import { image_2 } from "..";
+import { image_1 } from "..";
 import { FormDataContext } from "../../contexts/FormContext";
 import Stepper from "./Stepper";
 import Question from "./Question";
-import { ResultContext } from "../../contexts/ResultContext";
 import { ButtonStyleOne, ButtonStyleTwo } from "./buttonStyle";
-import { useSwipeable } from "react-swipeable";
 import { motion } from "framer-motion";
-const SecondForm = ({ handleClick, questions, changeState }) => {
+import { useSwipeable } from "react-swipeable";
+
+const ThirdForm = ({ handleClick, questions }) => {
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [formData, setFormData] = useContext(FormDataContext);
-  const [isResult, setIsResult] = useContext(ResultContext);
+  const [isChecking, setIsChecking] = useState(false);
+  const [selectedValues, setSelectedValues] = useState([]);
   function handleChoiceClick(e) {
     const value = e.target.value;
-    const checked = e.target.checked;
+    let checked = e.target.checked;
     if (checked) {
+      // updateFormData(currentQuestionIndex, value);
       setChoices((prev) => [...prev, value]);
     } else {
       setChoices(choices.filter((e) => e !== value));
     }
   }
   function handleNextClick() {
-    setData(choices);
     // updateFormData(currentQuestionIndex,choices)
+    setData(choices);
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   }
   function handlePrevClick() {
     setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
   }
-  //--------------------------------------------------------------
-  //Testing with question 1 ,2 , 3, 4
-  // const updateFormData = (questionNumber, choicesData) => {
-  //   setFormData((prevFormData) => ({
-  //     ...prevFormData,
-  //     [`question${questionNumber + 5}`]: choicesData,
-  //   }));
-  // };
-  //-------------------------------------------------------------
   const setData = (choicesData) => {
     setFormData((pre) => ({
       ...pre,
-      question2: choicesData,
+      question1: choicesData,
     }));
   };
   const swipeHandlers = useSwipeable({
@@ -52,10 +45,9 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
     },
     onSwipedRight: () => handlePrevClick(),
   });
-
   function handleSubmit(e) {
     e.preventDefault();
-    setIsResult(true);
+    handleClick();
     setData(choices);
   }
 
@@ -70,10 +62,10 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
     >
       <div className="w-1/2">
         <p className=" text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-4 text-secondary">
-          Select Your Pace
+          Connect to Community
         </p>
-        <p className=" text-base font-normal mb-6 text-secondary">In Unit Amenities </p>
-        <img src={image_2} alt="" className="w-full md:w-3/4 " />
+        <p className=" text-base font-normal mb-6 text-secondary">In Neighborhood</p>
+        <img src={image_1} alt="" className="w-full md:w-3/4 " />
       </div>
       <div className="w-1/2">
         <div>
@@ -85,8 +77,7 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
           <Question text={currentQuestion.text}>
             {currentQuestion.questions.text.map((question, key) => (
               <div
-                key={key}
-                className={`flex flex-col items-center border   rounded  justify-center border-red-700 ${
+                className={`flex flex-col items-center border  rounded  justify-center border-red-700 ${
                   choices.includes(question) ? "bg-red-100" : "bg-white"
                 }  h-28 md:h-32 w-full relative`}
               >
@@ -95,7 +86,7 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
                   type="checkbox"
                   onClick={handleChoiceClick}
                   value={question}
-                  className="absolute top-2 left-3 w-4 h-4 text-red-600 bg-gray-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="checkbox absolute top-2 left-3 w-4 h-4 text-red-600 bg-blue-100 accent-red-500 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   checked={choices.includes(question)}
                 />
                 <label htmlFor={`choice-${key}`} className="icon-label">
@@ -105,7 +96,7 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
                         <img
                           src={icon}
                           alt=""
-                          className="object-cover  w-8 h-8 md:w-10 md:h-10   top-6 left-20"
+                          className="object-cover w-8 h-8 md:w-10 md:h-10  top-6 left-20"
                           key={i}
                         />
                       )
@@ -121,15 +112,12 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
             ))}
           </Question>
           <div className="flex justify-between mt-5">
-            {currentQuestionIndex === 0 ? (
-              <ButtonStyleTwo onClick={() => changeState(1)} text={"Back"} />
-            ) : (
-              currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />
-            )}
+            {currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />}
+
             {currentQuestionIndex < questions.length - 1 ? (
               <ButtonStyleOne onClick={handleNextClick} text={"Continue"} />
             ) : (
-              <ButtonStyleOne onClick={handleSubmit} text={"Submit"} />
+              <ButtonStyleOne onClick={handleSubmit} text={"Continue"} />
             )}
           </div>
         </div>
@@ -138,4 +126,4 @@ const SecondForm = ({ handleClick, questions, changeState }) => {
   );
 };
 
-export default SecondForm;
+export default ThirdForm;

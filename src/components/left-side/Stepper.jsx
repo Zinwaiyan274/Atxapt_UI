@@ -14,7 +14,7 @@ const Stepper = ({ questions, currentIndex, setCurrentIndex }) => {
       <p className=" font-semibold text-base my-2 text-redDark mb-5">
         Step {currentIndex + 1} of {questions.length}
       </p>
-      <ol className="flex gap-2 items-center w-full mb-10 md:mb-16">
+      <ol className="flex gap-2 items-center w-full mb-5 md:mb-8 lg:mb-10 ">
         {questions.map(
           (key, index) =>
             currentIndex < index ? (

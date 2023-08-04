@@ -4,7 +4,7 @@ export const ButtonStyleOne = ({ text, onClick }) => {
   return (
     <a
       href="#_"
-      className="inline-flex items-center justify-center ms-2 md:ms-0  px-6 py-3 mb-2 text-xs md:text-sm text-[#7A7272
+      className="inline-flex items-center justify-center ms-2 md:ms-0  px-3 md:px-6 py-3 mb-2 text-xs md:text-sm text-[#7A7272
         ] border border-gray-600 rounded-md hover:bg-red-500"
       data-primary="green-400"
       data-rounded="rounded-2xl"

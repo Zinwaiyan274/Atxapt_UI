@@ -7,12 +7,10 @@ import { ButtonStyleOne, ButtonStyleTwo } from "./buttonStyle";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
-const FirstForm = ({ handleClick, questions }) => {
+const FirstForm = ({ handleClick, questions, changeState }) => {
   const [choices, setChoices] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [formData, setFormData] = useContext(FormDataContext);
-  const [isChecking, setIsChecking] = useState(false);
-  const [selectedValues, setSelectedValues] = useState([]);
   function handleChoiceClick(e) {
     const value = e.target.value;
     let checked = e.target.checked;
@@ -61,11 +59,11 @@ const FirstForm = ({ handleClick, questions }) => {
       className="container flex flex-col md:flex-row w-full h-full justify-center items-center overflow-hidden "
     >
       <div className="w-1/2">
-        <p className=" text-2xl md:text-4xl font-semibold mb-2 md:mb-4 text-secondary">
+        <p className=" text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-4 text-secondary">
           Connect Community
         </p>
-        <p className=" text-base font-normal mb-6 text-secondary">In building Amertic</p>
-        <img src={image_1} alt="" />
+        <p className=" text-base font-normal mb-6 text-secondary">In Apartment Complex Amenities</p>
+        <img src={image_1} alt="" className="w-full md:w-3/4 " />
       </div>
       <div className="w-1/2">
         <div>
@@ -79,7 +77,7 @@ const FirstForm = ({ handleClick, questions }) => {
               <div
                 className={`flex flex-col items-center border  rounded  justify-center border-red-700 ${
                   choices.includes(question) ? "bg-red-100" : "bg-white"
-                }  h-32 w-full relative`}
+                }  h-28 md:h-32 w-full relative`}
               >
                 <input
                   id={`choice-${key}`}
@@ -112,7 +110,11 @@ const FirstForm = ({ handleClick, questions }) => {
             ))}
           </Question>
           <div className="flex justify-between mt-5">
-            {currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />}
+            {currentQuestionIndex === 0 ? (
+              <ButtonStyleTwo onClick={() => changeState(0)} text={"Back"} />
+            ) : (
+              currentQuestionIndex > 0 && <ButtonStyleTwo onClick={handlePrevClick} text={"Back"} />
+            )}
 
             {currentQuestionIndex < questions.length - 1 ? (
               <ButtonStyleOne onClick={handleNextClick} text={"Continue"} />

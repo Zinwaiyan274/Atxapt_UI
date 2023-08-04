@@ -1,29 +1,39 @@
 import React from "react";
-import { StepContext } from "../contexts/StepContext";
-import { useContext } from "react";
 import { useState } from "react";
-import { questionsForCommunity, questionsForPlace } from "./QuestionSets";
+import { questionForNeighborhood, questionsForCommunity, questionsForPlace } from "./QuestionSets";
 import FirstForm from "./left-side/FirstForm";
 import SecondForm from "./left-side/SecondForm";
+import ThirdForm from "./left-side/ThirdForm";
 
 const Form = () => {
   const [isChange, setIsChange] = useState(0);
-  const changeHandle = () =>{
-    setIsChange(isChange == 0 ? 1 : 0)
-  }
+  const changeHandle = () => {
+    // setIsChange(isChange == 0 ? 1 : 0);
+    setIsChange((prevValue) => (prevValue + 1) % 3);
+  };
   const Forms = () => {
-    switch(isChange){
+    // eslint-disable-next-line default-case
+    switch (isChange) {
       case 0:
-        return(
-          <>
-          <FirstForm handleClick={changeHandle} questions={questionsForCommunity} />
-          </>
-          
-        )
+        return <ThirdForm handleClick={changeHandle} questions={questionForNeighborhood} />;
       case 1:
-        return(
-          <SecondForm handleClick={changeHandle} questions={questionsForPlace} />
-        )
+        return (
+          <>
+            <FirstForm
+              handleClick={changeHandle}
+              questions={questionsForCommunity}
+              changeState={setIsChange}
+            />
+          </>
+        );
+      case 2:
+        return (
+          <SecondForm
+            handleClick={changeHandle}
+            questions={questionsForPlace}
+            changeState={setIsChange}
+          />
+        );
     }
   };
 

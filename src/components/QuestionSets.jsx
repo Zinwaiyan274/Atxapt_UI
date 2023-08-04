@@ -24,7 +24,7 @@ import {
   roofingIcon,
   rowOfSeatsIcon,
   sunloungerIcon,
-  swimmingIcon, 
+  swimmingIcon,
   tennisCourtIcon,
   tumbleDryerIcon,
   valetParkingIcon,
@@ -45,7 +45,7 @@ export const questionsForCommunity = [
     questions: {
       text: ["Gym/Fitness Center", "Basketball Court", "Tennis Court"],
 
-      icons: [dumbbellIcon,basketBallIcon,tennisCourtIcon]
+      icons: [dumbbellIcon, basketBallIcon, tennisCourtIcon],
     },
   },
   {
@@ -84,7 +84,13 @@ export const questionsForPlace = [
   {
     text: " Parking preferences? Select your Spots! ",
     questions: {
-      text: ['Parking Avaliable','Covered Parking','Garage Parking','Bike Parking','Parking Not Important'],
+      text: [
+        "Parking Avaliable",
+        "Covered Parking",
+        "Garage Parking",
+        "Bike Parking",
+        "Parking Not Important",
+      ],
 
       icons: [valetParkingIcon, indoorParkingIcon, gargeIcon, bikeParkingIcon, noParkingIcon],
     },
@@ -100,7 +106,53 @@ export const questionsForPlace = [
   {
     text: " Dream Kitchen?",
     questions: {
-      text: ["Granite Counter Tops", "Island Kitchen", "Stainless steel Appliences",'Washer Dryer'],
+      text: [
+        "Granite Counter Tops",
+        "Island Kitchen",
+        "Stainless steel Appliences",
+        "Washer Dryer",
+      ],
+
+      icons: [bardAboveIcon, petIcon, kitchenIcon, tumbleDryerIcon],
+    },
+  },
+];
+
+export const questionForNeighborhood = [
+  {
+    text: " What are your outdoor Amenities? ",
+    questions: {
+      text: ["Downtown", "East down town", "South Congress", "Riverside"],
+
+      icons: [bardAboveIcon, dogCollarIcon, gasStationIcon],
+    },
+  },
+  {
+    text: " What Places do you want to live near by",
+    questions: {
+      text: [
+        "Resturants",
+        "Convience Stories",
+        "Coffee Shops",
+        "Music and Entertainment",
+        "Outdoor Spaces",
+      ],
+
+      icons: [valetParkingIcon, indoorParkingIcon, gargeIcon, bikeParkingIcon, noParkingIcon],
+    },
+  },
+  {
+    text: " What Tribe are you looking for?",
+    questions: {
+      text: ["Pets", "Politics", "Rainbow", "Booze", "Tech Bros", "Geeks"],
+
+      icons: [fireplaeIcon, roofingIcon, ceilingIcon],
+    },
+  },
+  {
+    text: " How do you move around",
+    questions: {
+      text: ["Car", "Bus", "Bike", "Walk"],
 
       icons: [bardAboveIcon, petIcon, kitchenIcon, tumbleDryerIcon],
     },

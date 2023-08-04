@@ -13,9 +13,8 @@ export const datas = [
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8479-1-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8455-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
-      "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://atxapt.com/appartments/ranch-inspired-garden-style-apartments/",
     features: [
       {
         img: locationIcon,
@@ -43,13 +42,13 @@ export const datas = [
     id: 2,
     img: "https://www.ariseriverside.com/wp-content/uploads/2021/04/floortop.jpg",
     title: "Arise Riverside",
-    text: "The community is located just 10-20 minutes away from the vibrant culture, energy, and career opportunities of Downtown Austin via East Riverside Drive. Near a local H-E-B plus! The leasing office showcases striking colors, eye-catching flourishes, and neighborly charm. By keeping the information well-categorized and concise, we can ensure an AI can easily navigate, understand, and learn from the structure.",
+    text: "The community is located just 10-20 minutes away from the vibrant culture, energy, and career opportunities of Downtown Austin via East Riverside Drive. Near a local H-E-B plus! The leasPing office showcases striking colors, eye-catching flourishes, and neighborly charm. By keeping the information well-categorized and concise, we can ensure an AI can easily navigate, understand, and learn from the structure.",
     images: [
       "https://www.ariseriverside.com/wp-content/uploads/2021/05/ARISE-2-BR_0391-stack-580x800.jpg",
       "https://www.ariseriverside.com/wp-content/uploads/2021/04/ARISE-2-BR_0321-stack-300x273.jpg",
       "https://www.ariseriverside.com/wp-content/uploads/2021/04/ARISE-2-BR_0351-stack-253x300.jpg",
     ],
-    siteLink: "https://www.ariseriverside.com/floor-plans/",
+    siteLink: "https://atxapt.com/appartments/avenir-apartments/",
     features: [
       {
         img: locationIcon,
@@ -83,7 +82,7 @@ export const datas = [
       "https://www.themontapts.com/uploads/images/images/1336x1336G/737339/IMG_4806.jpg?1677109277",
       "https://www.themontapts.com/uploads/images/images/1336x1336G/737335/IMG_4771.jpg?1677109271",
     ],
-    siteLink: "https://www.themontapts.com/the-mont-austin-tx",
+    siteLink: "https://atxapt.com/appartments/the-mont/",
     features: [
       {
         img: locationIcon,
@@ -118,7 +117,7 @@ export const datas = [
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
     ],
-    siteLink: "https://themonroeatx.securecafe.com/onlineleasing/the-monroe1/floorplans.aspx",
+    siteLink: "https://atxapt.com/appartments/the-monroe/",
     features: [
       {
         img: locationIcon,
@@ -153,7 +152,7 @@ export const datas = [
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_365/s3/2/55533/brixton%20south%20shore%20model%20b_0241%20stack.jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_365/s3/2/55533/img_9516.jpg",
     ],
-    siteLink: "https://www.brixtonatx.com/",
+    siteLink: "https://atxapt.com/appartments/metropolitan-riverside-midrise/",
     features: [
       {
         img: locationIcon,
@@ -188,7 +187,7 @@ export const datas = [
       "https://assets.myrazz.com/1881f29e-359c-4cab-b9a7-fe287d8511d9/-/scale_crop/640x640/center/-/format/auto/-/quality/lighter/-/resize/x1200/",
       "https://assets.myrazz.com/b26716a2-a6b3-48bc-9563-aef672e07eac/-/scale_crop/640x640/center/-/format/auto/-/quality/lighter/-/resize/x1200/",
     ],
-    siteLink: "https://www.alturaaustin.com/",
+    siteLink: "https://atxapt.com/appartments/altura/",
     features: [
       {
         img: locationIcon,
@@ -224,7 +223,7 @@ export const datas = [
       "https://assets.myrazz.com/66ae531f-caea-496c-b0c2-ef01d0774684/-/scale_crop/640x640/center/-/format/auto/-/quality/lighter/-/resize/x1200/",
       "https://assets.myrazz.com/7e1f69ff-e0a6-44b1-990a-b59a9b90c328/-/scale_crop/640x640/center/-/format/auto/-/quality/lighter/-/resize/x1200/",
     ],
-    siteLink: "https://www.southshoretx.com/",
+    siteLink: "https://atxapt.com/appartments/south-shore/",
     features: [
       {
         img: locationIcon,
@@ -259,7 +258,7 @@ export const datas = [
       "https://capi.myleasestar.com/v2/dimg/142926706/1536x714/142926706.jpg",
       "https://capi.myleasestar.com/v2/dimg/142926707/1536x714/142926707.jpg",
     ],
-    siteLink: "https://www.ellieapartments.com/",
+    siteLink: "https://atxapt.com/appartments/ellie-apartments/",
     features: [
       {
         img: locationIcon,
@@ -294,8 +293,7 @@ export const datas = [
       "https://images1.apartmenthomeliving.com/i2/AygbOIY7qNX9_AlkGofucVZkgleHh9Rjg_w7P3umVN4/114/image.png?p=1",
       "https://images1.apartmenthomeliving.com/i2/dzJlMcerii_EeKUywmPK7Eypl_DnPh9v3umO97hD0Qw/114/image.jpg?p=1",
     ],
-    siteLink:
-      "https://www.apartmenthomeliving.com/apartment-finder/Stassney-at-SoCo-Austin-TX-78744-206662",
+    siteLink: "https://atxapt.com/appartments/stassney-woods/",
     features: [
       {
         img: locationIcon,
@@ -329,8 +327,7 @@ export const datas = [
       "https://livesur512.com/assets/images/cache/SUR512-pois-2-9292249b52f24a09dab04d3cc5100388.jpg",
       "https://livesur512.com/assets/images/cache/gallery_Kitchen3-67858b34d2824b4edc87601b11431ccb.jpg",
     ],
-    siteLink:
-      "https://livesur512.com/floorplans/?gclid=Cj0KCQjwk5ibBhDqARIsACzmgLSpM0xmgzblGp4xoBEXLuz0XP1SkUDUHLSu62Ub0Vzz-ZI_3JvndQkaAon-EALw_wcB",
+    siteLink: "https://atxapt.com/appartments/sur512/",
     features: [
       {
         img: locationIcon,
@@ -365,7 +362,7 @@ export const datas = [
       "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/113759/TX_Austin_ForestCreekApartments_p0120169_4_04_1_PhotoGallery.jpg?&quality=85&quality=80&width=515&height=315&mode=crop",
       "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/113759/TX_Austin_ForestCreekApartments_p0120169_9_09_1_PhotoGallery.jpg?&quality=85&quality=80&width=515&height=315&mode=crop",
     ],
-    siteLink: "https://www.smiforestcreekapts.com/photogallery.aspx",
+    siteLink: "https://atxapt.com/appartments/forest-creek-vilage/",
     features: [
       {
         img: locationIcon,
@@ -470,7 +467,7 @@ export const datas = [
       "https://capi.myleasestar.com/v2/dimg/67638906/1536x656/67638906.jpg",
       "https://capi.myleasestar.com/v2/dimg/67638912/1536x656/67638912.jpg",
     ],
-    siteLink: "https://www.liveattree.com/",
+    siteLink: "https://atxapt.com/appartments/tree-apartments/",
     features: [
       {
         img: locationIcon,
@@ -505,7 +502,7 @@ export const datas = [
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_1110,g_auto/s3/3/550160/skyline%20leasing-32%20(medium).jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_1110,g_auto/s3/3/550160/skyline%20leasing-39%20(medium).jpg",
     ],
-    siteLink: "https://www.skylineatbartoncreek.com/",
+    siteLink: "https://atxapt.com/appartments/skyline-at-bartoncreek/",
     features: [
       {
         img: locationIcon,
@@ -539,8 +536,7 @@ export const datas = [
       "https://medialibrarycf.entrata.com/1826/MLv3/3/27/2022/4/16/56303/5cf69ead63c2e4.96379718236.jpg",
       "https://medialibrarycf.entrata.com/1826/MLv3/3/27/2022/4/16/56304/5cf69eadc45652.39107392835.jpg",
     ],
-    siteLink:
-      "https://coleapts.prospectportal.com/austin/cole-apartments/launch-check-availability/1/",
+    siteLink: "https://atxapt.com/appartments/coleapartments/",
     features: [
       {
         img: locationIcon,
@@ -574,7 +570,7 @@ export const datas = [
       "https://crescentaustin.com/assets/images/cache/gallery_4_crescent_apartments_2961-9b0577714d9c027bfa067be61697c282.jpg",
       "https://crescentaustin.com/assets/images/cache/gallery_5_crescent_apartments_2961-7dff2ebe47bb8c52d48b22c827b8b4e7.jpg",
     ],
-    siteLink: "https://crescentaustin.com/floorplans/",
+    siteLink: "https://atxapt.com/appartments/crescent-apartments/",
     features: [
       {
         img: locationIcon,
@@ -608,7 +604,7 @@ export const datas = [
       "https://alexangarzaranch.com/wp-content/uploads/2019/11/06-Alexan-Garza-Ranch-AP-Bathroom-TCRA-4188-040-2250x1500.jpg",
       "https://alexangarzaranch.com/wp-content/uploads/2019/11/07-Alexan-Garza-Ranch-AP-Laundry-TCRA-4188-023-2250x1500.jpg",
     ],
-    siteLink: "https://alexangarzaranch.com/gallery/",
+    siteLink: "https://atxapt.com/appartments/alexan-garza-ranch/",
     features: [
       {
         img: locationIcon,
@@ -642,7 +638,7 @@ export const datas = [
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_1110,g_auto/s3/3/96234/6865%20(large).jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_1110,g_auto/s3/3/96234/6801%20(large).jpg",
     ],
-    siteLink: "https://www.tambaleoaustin.com/photogallery",
+    siteLink: "https://atxapt.com/appartments/tambaleo-apartments/",
     features: [
       {
         img: locationIcon,
@@ -676,7 +672,7 @@ export const datas = [
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_fill,w_1110,g_auto/s3/3/433256/5th%20street%20commons%20006w.jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0,w_925,h_616,c_crop/q_auto,f_auto,c_limit,w_925/s3/3/433256/a1%20model-%20living.jpg",
     ],
-    siteLink: "https://www.liveat5thstcommons.com/",
+    siteLink: "https://atxapt.com/appartments/5thst-commons/",
     features: [
       {
         img: locationIcon,
@@ -710,7 +706,7 @@ export const datas = [
       "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1238,h_825,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler-004w.jpg",
       "https://resource.rentcafe.com/image/upload/x_0,y_0,w_2625,h_1750,c_crop/q_auto,f_auto,c_limit,w_365/s3/3/433255/pressler-001w.jpg",
     ],
-    siteLink: "https://www.liveatpressler.com/",
+    siteLink: "https://atxapt.com/appartments/pressler/",
     features: [
       {
         img: locationIcon,
@@ -779,7 +775,7 @@ export const datas = [
       "https://liveatecho.com/assets/images/cache/Living-Area-3-a5092224815c1cb6c66837ffa6901745.jpg",
       "https://liveatecho.com/assets/images/cache/Living-Area-4bd78e06b47ae3eb6ab716a3017b3da7.jpg",
     ],
-    siteLink: "https://liveatecho.com/floorplans/",
+    siteLink: "https://atxapt.com/appartments/echo-apartments/",
     features: [
       {
         img: locationIcon,
@@ -813,7 +809,7 @@ export const datas = [
       "https://northshoreaustin.com/assets/images/cache/northshore-residences-001w-8fe22942e26e4f4733d9d8bd7ef31728.jpg",
       "https://northshoreaustin.com/assets/images/cache/northshore-residences-002w-c28d5216f85e210a9fec4f51a6fe8dac.jpg",
     ],
-    siteLink: "https://northshoreaustin.com/",
+    siteLink: "https://atxapt.com/appartments/northshore/",
     features: [
       {
         img: locationIcon,
@@ -848,7 +844,7 @@ export const datas = [
       "https://3waller.com/assets/images/cache/Clubroom-Kitchen1-a0167289f7e82f3f79a5cc89dc0b8e04.jpg",
       "https://3waller.com/assets/images/cache/Clubroom-Pool-Table-and-other11-86a0e01575cf8f6ad95508fa527edfe1.jpg",
     ],
-    siteLink: "https://3waller.com/",
+    siteLink: "https://atxapt.com/appartments/3-waller/",
     features: [
       {
         img: locationIcon,
@@ -916,7 +912,7 @@ export const datas = [
       "https://avenireastaustin.com/sites/g/files/jifouz1061/files/styles/slideshow_image/public/2022-08/Avenir-102.jpg?itok=e2VS71jd",
       "https://avenireastaustin.com/sites/g/files/jifouz1061/files/styles/slideshow_image/public/2022-08/Avenir-110.jpg?itok=AAXdG4AD",
     ],
-    siteLink: "https://avenireastaustin.com/",
+    siteLink: "https://atxapt.com/appartments/avenir-apartments/",
     features: [
       {
         img: locationIcon,
@@ -951,7 +947,7 @@ export const datas = [
       "https://eastvueranch.com/wp-content/uploads/2021/02/IMG_8464-300x300_c.jpg",
       "https://eastvueranch.com/wp-content/uploads/2022/12/6112-IMG_8335-300x300_c.jpg",
     ],
-    siteLink: "https://eastvueranch.com/",
+    siteLink: "https://atxapt.com/appartments/the-shoal/",
     features: [
       {
         img: locationIcon,
@@ -985,7 +981,7 @@ export const datas = [
       "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/Anne+Peterson+-+River+Oaks-5-1920w.jpg",
       "https://lirp.cdn-website.com/609bac3c/dms3rep/multi/opt/Anne+Peterson+-+River+Oaks-15-1920w.jpg",
     ],
-    siteLink: "https://www.rainieratx.com/",
+    siteLink: "https://atxapt.com/appartments/cozy-river-oaks/",
     features: [
       {
         img: locationIcon,
@@ -1019,7 +1015,7 @@ export const datas = [
       "https://assets.myrazz.com/6ed32cea-47ee-4909-be75-84bc1d6d25fa/-/scale_crop/1280x1280/center/-/format/auto/-/quality/lighter/-/resize/x1200/",
       "https://assets.myrazz.com/27601111-2129-4472-8c03-1c1212df8bdb/-/scale_crop/1280x1280/center/-/format/auto/-/quality/lighter/-/resize/x1200/",
     ],
-    siteLink: "https://www.livetheeastwood.com/",
+    siteLink: "https://atxapt.com/appartments/eastwood-apartments/",
     features: [
       {
         img: locationIcon,
@@ -1052,7 +1048,7 @@ export const datas = [
       "https://images.apts247.info/59941/1025x700.webp",
       "https://thumbs.apts247.info/resize/?img=https://media.apts247.info/ff/fff5868977e74cfda58cddfa78ee31d1/amenity_lists/community-amenities.jpg&w=1050&output=webp",
     ],
-    siteLink: "https://www.livefortbranchattrumanslanding.com/",
+    siteLink: "https://atxapt.com/appartments/fort-branch-at-trumans-landing/",
     features: [
       {
         img: locationIcon,
@@ -1079,13 +1075,13 @@ export const datas = [
   {
     id: 32,
     img: "https://assets.website-files.com/645527628ac05433a1b81db9/645528ea959ddedd701e367f_og%20hero%20image.jpeg",
-    title: "Urban Vilas Apartment",
+    title: "Urban Villa Apartment",
     text: "Starlight residents enjoy private access to one-of-a-kind spaces and features throughout the community and within each unique apartment home. Located in the eclectic East Austin neighborhood just a few blocks away from downtown Austin.",
     images: [
       "https://assets.website-files.com/645527628ac05433a1b81db9/6455380f2db8463ed178f4e9_69125297-p-1080.jpg",
       "https://assets.website-files.com/645527628ac05433a1b81db9/6455382aeb9487059618730a_69125296-p-1080.jpg",
     ],
-    siteLink: "https://www.urbanvillasapts.com/",
+    siteLink: "https://atxapt.com/appartments/urban-villa-apartments/",
     features: [
       {
         img: locationIcon,
@@ -1119,7 +1115,7 @@ export const datas = [
       "https://resource.rentcafe.com/image/upload/x_0,y_0/q_auto,f_auto,c_limit,w_576/s3/3/146549/vol%202%20b1%20color%20wash.png",
       "https://resource.rentcafe.com/image/upload/x_180,y_20,w_1673,h_1980,c_crop/q_auto,f_auto,c_limit,w_576/s3/3/146549/vol%204%20e1%20color%20wash.png",
     ],
-    siteLink: "https://www.volumeapartments.com/",
+    siteLink: "https://atxapt.com/appartments/volume-6/",
     features: [
       {
         img: locationIcon,
@@ -1153,7 +1149,7 @@ export const datas = [
       "https://www.starlightatx.com/uploads/images/images/1336x1336G/744450/IMG_9048.jpg?1685561174",
       "https://www.starlightatx.com/uploads/images/images/1336x1336G/718957/Starlight_-_Courtyard.jpg?1663348336",
     ],
-    siteLink: "https://www.starlightatx.com/starlight-austin-tx/",
+    siteLink: "https://atxapt.com/appartments/the-starlight-apartments/",
     features: [
       {
         img: locationIcon,
@@ -1187,7 +1183,7 @@ export const datas = [
       "https://arnoldaustin.com/assets/images/cache/Bathroom-1-45fc55f5a46f631f1625eaf07ad32058.jpg",
       "https://arnoldaustin.com/assets/images/cache/Bedroom-1-d827841ee77f6b7bffb130332e7cf95f.jpg",
     ],
-    siteLink: "https://arnoldaustin.com/",
+    siteLink: "https://atxapt.com/appartments/arnold/",
     features: [
       {
         img: locationIcon,

@@ -1,10 +1,20 @@
 import React, { useRef, useState, useEffect } from "react";
 import { areaIcon, bathIcon, buildingIcon, image_1, image_2, locationIcon } from "..";
 import { data } from "autoprefixer";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import { datas } from "../../datas";
 const Modal = ({ show, setShow, index, props }) => {
   const textColor = "#B14B3C";
   const [selectImg, setSelectImg] = useState(props.images[0]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const selectClick = (index) => {
     setSelectImg(props.images[index]);
   };
@@ -41,39 +51,62 @@ const Modal = ({ show, setShow, index, props }) => {
               {/*body*/}
               <div className="relative p-10 flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 md:mx-10 mb-5">
-                  <img
-                    src={selectImg}
-                    alt=""
-                    className="object-cover w-[567px] h-[300px] selected"
-                  />
+                  {loading ? (
+                    <Skeleton height={300} width={500} />
+                  ) : (
+                    <img
+                      src={selectImg}
+                      alt=""
+                      className="object-cover w-[567px] h-[300px] selected"
+                    />
+                  )}
                   <div className=" w-[142px] h-[90px] justify-between flex mt-4 ">
                     {props.images.map((img, index) => (
-                      <img
-                        key={index}
-                        src={img}
-                        alt=""
-                        className=" object-cover me-2 cursor-pointer"
-                        onClick={() => selectClick(index)}
-                      />
+                      <>
+                        {/* Show Skeleton for loading image thumbnails */}
+                        {loading ? (
+                          <Skeleton width={100} height={90} className="me-5" />
+                        ) : (
+                          <img
+                            src={img}
+                            alt=""
+                            className=" object-cover cursor-pointer me-5"
+                            width={100}
+                            height={90}
+                            onClick={() => selectClick(index)}
+                            onLoad={() => setLoading(false)} // Set loading to false when the thumbnail image finishes loading
+                          />
+                        )}
+                      </>
                     ))}
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
                   {props.features.map((item) => (
-                    <div className="flex mb-2 gap-2">
-                      <div
-                        class=" w-7 h-7 rounded-full p-1 flex items-center justify-center
+                    <>
+                      {loading ? (
+                        <Skeleton />
+                      ) : (
+                        <div className="flex mb-2 gap-2">
+                          <div
+                            class=" w-7 h-7 rounded-full p-1 flex items-center justify-center
                        bg-red-700 hover:bg-red-500 text-white"
-                      >
-                        <img src={item.img} alt="" className=" object-cover w-auto" />
-                      </div>
-                      <h2 className="text-gray-900 font-extralight">{item.text}</h2>
-                    </div>
+                          >
+                            <img src={item.img} alt="" className=" object-cover w-auto" />
+                          </div>
+                          <h2 className="text-gray-900 font-extralight">{item.text}</h2>
+                        </div>
+                      )}
+                    </>
                   ))}
                   <h2 className=" font-normal text-xl my-6">Price</h2>
-                  <p className={` text-3xl mb-7 text-[#B14B3C] font-semibold`}>
-                    $ {props.cost.start} - $ {props.cost.end}
-                  </p>
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    <p className={` text-3xl mb-7 text-[#B14B3C] font-semibold`}>
+                      $ {props.cost.start} - $ {props.cost?.end}
+                    </p>
+                  )}
                   <a
                     href="tel:512-333-0011"
                     class="inline-flex items-center text-xs md:text-base justify-center h-12 px-2 md:px-6 font-medium tracking-wide text-white transition duration-200 bg-[#B14B3C] rounded-none hover:bg-gray-800 focus:shadow-outline focus:outline-none"
